@@ -35,7 +35,7 @@
 |[Sahatsawat][] | <https://github.com/keyboard2543> | 
 |[Saruj][] | <https://github.com/Jomsaruj> | 
 |[Settanat][] | <https://github.com/Ing140943> | 
-|[Sirapop][] | <https://github.com/SIrapopKunjiak> | 
+|[Sirapop][] | <https://github.com/bemyXmas> | 
 |[Siravit][] | <https://github.com/Kuea666> | 
 |[Sorawichaya][] | <https://github.com/Firstyfirst> | 
 |[Suchon][] | <https://github.com/toey10112> | 
@@ -79,7 +79,7 @@
 [Sahatsawat]: https://github.com/keyboard2543
 [Saruj]: https://github.com/Jomsaruj
 [Settanat]: https://github.com/Ing140943
-[Sirapop]: https://github.com/SIrapopKunjiak
+[Sirapop]: https://github.com/bemyXmas
 [Siravit]: https://github.com/Kuea666
 [Sorawichaya]: https://github.com/Firstyfirst
 [Suchon]: https://github.com/toey10112
