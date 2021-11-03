@@ -1,6 +1,10 @@
 ## Feedback on Assignments
 
+[Project Tests](project-testing.md)
+
 [Unit test of CoffeeMaker](CoffeeMaker-Unittest.md)
+
+[Regular Expressions Example](regex.md) for matching the ingredients string returned by `checkInventory()`.
 
 
 ## Students
