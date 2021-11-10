@@ -1,5 +1,9 @@
 ## Evaluating the Appointment Booking System Tests
 
+[Specification for the Appointment Booking Service][booking-service]
+
+[booking-service]: https://docs.google.com/document/d/1WAaBFQ5lIB1Ms1rHlfZl3HnOqYhT0v3YKo6iTpyXFhY/
+
 ### How I Evaluated
 
 I used a BookingSystem with 7 variants as listed below,
@@ -39,4 +43,19 @@ and clearly violate the specification.
 
 2. Using Appointment `toString` to compare actual and expected values, where you construct the expected string in code.  This is brittle and error-prone. You should compare the actual attributes of the Appointment.    
    - A good way would be to write your own helper method (such as `assertEqual(Appointment expected, Appointment actual)` and test each attribute using asserts.
+   - If you **really** need to test by comparing strings, then instead of building the string yourlself, create an Appointment object with the data you expect and call that object's toString:
+   ```java
+   Appointment expected = new Appointment(expectedId, expectedName, date);
+   Appointment actual = bs.findAppointmentForForId(expectedId);
+   // try not to test this way:
+   assertEquals(expected.toString(), actual.toString());
+   // better: use your own helper method
+   assertAppointmentsEqual(expected, actual);
 
+   public void assertAppointmentsEqual(appt1, appt2) {
+       // attributes are public final. Don't need getter method.
+       assertEqual(appt1.personId, appt2.personId);
+       assertEqual(appt1.personName, appt2.personName);
+       assertEqual(appt1.date, appt2.date);
+   }
+   ```

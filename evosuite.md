@@ -45,6 +45,7 @@ java -jar evosuite-1.2.0.jar -help
 To see parameters you can set in a configuration file:
 ```
 java -jar evosuite-1.2.0.jar -listParameters
+```
 
 Useful command line options:
 ```
@@ -74,6 +75,14 @@ So, to run the tests you need:
 - the compiled unit test classes
 - evosuite-standalone-runtime.jar or evosuite.jar on the classpath
 
+Add to the `build.gradle` file
+
+```groovy
+dependencies {
+    ...
+    testImplementation(files("/opt/evosuite/evosuite-standalone-runtime-1.2.0.jar"))
+}
+```
 
 
 Limit which tests are run:
