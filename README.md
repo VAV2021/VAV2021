@@ -8,6 +8,8 @@
 
 [Regular Expressions Example](regex.md) for matching the ingredients string returned by `checkInventory()`.
 
+[Using EvoSuite](evosuite.md)
+
 
 ## Students
 
