@@ -12,6 +12,9 @@
 
 [Robot Framework](robot-framework.md)
 
+[Thai ID Checksum Formula](thai_id_checksum.md)
+
+
 
 ## Students
 

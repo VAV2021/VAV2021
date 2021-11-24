@@ -109,12 +109,13 @@ Documentation:
 - [SeleniumLibrary Keywords](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html) single page reference (like Javadoc)
 - 
 
-Use in tests:
+SeleniumLibrary in tests:
 
 ```robot
 *** Settings ***
 Documentation   Some test using seleniumlibrary
-Libary          SeleniumLibrary
+Library         SeleniumLibrary
+Resource        mytests.resource
 
 *** Variables ***
 # variable names can contain spaces
@@ -140,13 +141,17 @@ Open Browser to Login Page
 Input Username
 	[Arguments]  ${username}
 	Input Text	 usernamefield  ${username}
+    # use  id:   or   name:  to specify search criterion
+    Input Text   name:usernamefield  {$username}
 
 Input Password
 	[Arguments]  ${password}
 	Input Text	 passwordfield  ${password}
 
 Submit
-	Click Button login_button
+	Click Button   login_button
+    # or use the button class (if there is only 1 "submit" on the page)
+    Click Button   class:submit
 
 *** Tasks ***
 # User defined tasks
